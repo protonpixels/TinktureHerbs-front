@@ -2,12 +2,16 @@
   <router-link :to="`/product/${product.id}`" class="product-card">
     <div class="img-wrap">
       <img :src="product.image" :alt="product.name" loading="lazy" />
+      <span class="number">{{ product.number }}</span>
     </div>
     <div class="meta">
-      <p class="category">{{ product.category }}</p>
       <h3 class="name">{{ product.name }}</h3>
+      <p class="notes">{{ product.notes }}</p>
       <p class="short">{{ product.short }}</p>
-      <p class="price">${{ product.price }}</p>
+      <div class="bottom-row">
+        <p class="price">${{ product.price }}</p>
+        <span class="size">{{ product.size }}</span>
+      </div>
     </div>
   </router-link>
 </template>
@@ -20,18 +24,21 @@ defineProps({ product: { type: Object, required: true } })
 .product-card {
   display: block;
   background: #fff;
-  border-radius: 14px;
+  border-radius: 16px;
   overflow: hidden;
+  border: 1px solid #ece5d8;
   transition:
     transform 0.2s,
-    box-shadow 0.2s;
-  box-shadow: 0 4px 16px rgba(#000, 0.05);
+    box-shadow 0.2s,
+    border-color 0.2s;
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 14px 32px rgba(#000, 0.09);
+    box-shadow: 0 18px 40px rgba($brown, 0.12);
+    border-color: $amber;
   }
 }
 .img-wrap {
+  position: relative;
   aspect-ratio: 1 / 1;
   overflow: hidden;
   background: #f1ece4;
@@ -40,31 +47,53 @@ defineProps({ product: { type: Object, required: true } })
     height: 100%;
     object-fit: cover;
   }
+  .number {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba($ink, 0.85);
+    color: $cream;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 999px;
+  }
 }
 .meta {
-  padding: 18px 20px 22px;
-  .category {
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: $pink;
-    font-weight: 700;
-    margin-bottom: 6px;
-  }
+  padding: 22px 22px 24px;
   .name {
-    font-size: 18px;
-    color: #1f1f1f;
+    font-size: 20px;
+    color: $ink;
     margin-bottom: 6px;
+    font-weight: 700;
+  }
+  .notes {
+    font-size: 13px;
+    color: $brown;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
   }
   .short {
     font-size: 14px;
-    color: #666;
-    margin-bottom: 12px;
+    color: $muted;
+    margin-bottom: 18px;
+    line-height: 1.5;
   }
+}
+.bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
   .price {
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 700;
-    color: #1f1f1f;
+    color: $ink;
+  }
+  .size {
+    font-size: 13px;
+    color: $muted;
   }
 }
 </style>

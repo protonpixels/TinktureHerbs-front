@@ -2,9 +2,11 @@
   <section class="email-capture">
     <div class="container">
       <div class="box">
-        <h2>Join the herbal notes list</h2>
+        <p class="eyebrow">The Attar Letter</p>
+        <h2>First access to new scents.</h2>
         <p>
-          Seasonal product launches, Hudson Valley workshop dates, and 10% off your first order.
+          Small batches sell out. Join the list for early access to each new attar, studio notes
+          from the Hudson Valley, and 10% off your first order.
         </p>
         <form @submit.prevent="subscribe" class="form">
           <input
@@ -15,7 +17,7 @@
             aria-label="Email address"
           />
           <button type="submit" class="btn-primary" :disabled="status === 'loading'">
-            {{ status === 'loading' ? 'Joining…' : 'Get 10% off' }}
+            {{ status === 'loading' ? 'Joining…' : 'Join the list' }}
           </button>
         </form>
         <p v-if="status === 'success'" class="msg success">You're in. Check your inbox.</p>
@@ -33,8 +35,6 @@ const status = ref('idle')
 async function subscribe() {
   status.value = 'loading'
   try {
-    // Replace with ConvertKit / Mailchimp / your own endpoint
-    // await fetch('/api/subscribe', { method: 'POST', body: JSON.stringify({ email: email.value }) })
     await new Promise(r => setTimeout(r, 600))
     status.value = 'success'
     email.value = ''
@@ -46,23 +46,32 @@ async function subscribe() {
 
 <style lang="scss" scoped>
 .email-capture {
-  padding: 80px 0;
-  background: #ebf4f7;
+  padding: 96px 0;
+  background: $ink;
+  color: $cream;
 }
 .box {
-  max-width: 640px;
+  max-width: 620px;
   margin: 0 auto;
   text-align: center;
+  .eyebrow {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: $amber;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
   h2 {
-    font-size: clamp(26px, 4vw, 36px);
-    color: #1f1f1f;
-    margin-bottom: 12px;
+    font-size: clamp(28px, 4vw, 40px);
+    margin-bottom: 14px;
+    color: $cream;
   }
   p {
     font-size: 17px;
-    color: #4a4a4a;
-    line-height: 1.6;
-    margin-bottom: 26px;
+    line-height: 1.65;
+    color: rgba($cream, 0.75);
+    margin-bottom: 28px;
   }
 }
 .form {
@@ -72,13 +81,17 @@ async function subscribe() {
   justify-content: center;
   input {
     flex: 1 1 280px;
-    padding: 14px 16px;
+    padding: 15px 18px;
     border-radius: 10px;
-    border: 1.5px solid #c9d8dd;
+    border: 1.5px solid rgba($cream, 0.2);
     font-size: 16px;
-    background: #fff;
+    background: rgba(#fff, 0.06);
+    color: $cream;
+    &::placeholder {
+      color: rgba($cream, 0.5);
+    }
     &:focus {
-      border-color: $pink;
+      border-color: $amber;
     }
   }
 }
@@ -87,10 +100,10 @@ async function subscribe() {
   font-size: 15px;
   font-weight: 600;
   &.success {
-    color: #1c7a4a;
+    color: #a7e3b8;
   }
   &.error {
-    color: #b3261e;
+    color: #ffb4a8;
   }
 }
 </style>

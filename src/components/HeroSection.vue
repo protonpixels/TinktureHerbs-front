@@ -2,31 +2,35 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <p class="eyebrow">Hudson Valley · Small-batch · Biologist-formulated</p>
+        <p class="eyebrow">Hudson Valley · Oil-based · Biologist-formulated</p>
         <h1>
-          Botanical skincare, scents, and home goods
-          <span>made by an herbalist.</span>
+          Attar perfume oils,
+          <span>rooted in resin and ritual.</span>
         </h1>
         <p class="subhead">
-          Plant-powered perfumes, facial creams, soaps, and candles—crafted in Tillson, NY by a
-          biologist and practicing herbalist.
+          Alcohol-free attars blended by a practicing herbalist in the so-called Hudson Valley
+          (occupied Haudenosaunee territory). Authentic & creative herbal delicacies.
         </p>
         <div class="hero-actions">
-          <router-link to="/shop" class="btn-primary">Shop the collection</router-link>
+          <router-link to="/shop" class="btn-primary">Shop the attars</router-link>
           <router-link to="/about" class="btn-secondary">Meet the maker</router-link>
         </div>
-        <p class="location-note">
+        <!-- <p class="location-note">
           <span class="pin">📍</span>
           Visit the studio in Tillson, NY —
           <router-link to="/contact">get directions</router-link>
-        </p>
+        </p> -->
       </div>
       <div class="hero-image-wrap">
         <!-- <img
           class="hero-image"
-          src="/images/hero.jpg"
-          alt="Herbalist pouring oil perfume by a window in the Hudson Valley"
+          src="/images/hero-attar.jpg"
+          alt="Amber glass attar bottle with resin and dried botanicals"
         /> -->
+        <div class="hero-badge">
+          <span class="badge-label">No. 01</span>
+          <span class="badge-name">Frankincense &amp; Myrrh</span>
+        </div>
       </div>
     </div>
   </section>
@@ -36,70 +40,110 @@
 
 <style lang="scss" scoped>
 .hero {
-  padding: 80px 0 96px;
+  padding: 96px 0 112px;
+  background:
+    radial-gradient(ellipse at top left, rgba($amber, 0.18), transparent 60%),
+    linear-gradient(180deg, $cream 0%, #fff 100%);
+  position: relative;
+  overflow: hidden;
 }
 .container {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 56px;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 64px;
   align-items: center;
 }
 .eyebrow {
-  font-size: 13px;
+  font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: $pink;
+  letter-spacing: 0.18em;
+  color: $brown;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 h1 {
-  font-size: clamp(38px, 5.5vw, 60px);
-  line-height: 1.08;
-  color: #1f1f1f;
+  font-size: clamp(40px, 5.4vw, 64px);
+  line-height: 1.05;
+  color: $ink;
   font-weight: 800;
+  letter-spacing: -0.01em;
   span {
-    color: $pink;
+    color: $brown;
+    font-style: italic;
+    font-weight: 700;
   }
 }
 .subhead {
   font-size: 19px;
   line-height: 1.65;
-  color: #4a4a4a;
+  color: $muted;
   max-width: 540px;
-  margin-top: 22px;
+  margin-top: 24px;
 }
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 32px;
+  margin-top: 34px;
 }
 .location-note {
   font-size: 15px;
-  color: #5a5a5a;
-  margin-top: 28px;
+  color: $muted;
+  margin-top: 30px;
   a {
-    color: $pink;
+    color: $brown;
     text-decoration: underline;
+    text-underline-offset: 3px;
   }
   .pin {
     margin-right: 4px;
   }
 }
+.hero-image-wrap {
+  position: relative;
+}
 .hero-image {
   width: 100%;
-  border-radius: 16px;
+  border-radius: 20px;
   object-fit: cover;
   aspect-ratio: 4 / 5;
-  box-shadow: 0 20px 50px rgba(#1f4a52, 0.18);
+  box-shadow: 0 30px 60px rgba($brown, 0.22);
+}
+.hero-badge {
+  position: absolute;
+  bottom: -22px;
+  left: -22px;
+  background: $ink;
+  color: $cream;
+  padding: 16px 22px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 12px 30px rgba(#000, 0.18);
+  .badge-label {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: $amber;
+    font-weight: 700;
+  }
+  .badge-name {
+    font-size: 15px;
+    font-weight: 700;
+  }
 }
 @media (max-width: 900px) {
   .container {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 48px;
   }
   .hero-image {
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 4 / 3;
+  }
+  .hero-badge {
+    left: 16px;
+    bottom: 16px;
   }
 }
 </style>

@@ -3,7 +3,6 @@
   <main id="main-content">
     <router-view />
   </main>
-  <ChatBot />
   <Footer />
 </template>
 
@@ -16,6 +15,7 @@ import ChatBot from './components/ChatBot.vue'
 <style lang="scss">
 * {
   margin: 0;
+
   padding: 0;
   box-sizing: border-box;
   outline: none;
@@ -32,6 +32,7 @@ import ChatBot from './components/ChatBot.vue'
     'Helvetica Neue',
     sans-serif;
 }
+
 a,
 a:visited,
 a:hover,
@@ -41,7 +42,6 @@ a:active {
 }
 #app,
 body {
-  background-color: #faf8f5;
   max-width: 100vw;
   width: 100%;
   box-sizing: border-box;
@@ -60,7 +60,7 @@ main#main-content {
 .btn-primary {
   display: inline-block;
   background-color: $pink;
-  color: #fff;
+  color: #fff !important;
   font-weight: 700;
   padding: 14px 26px;
   border-radius: 10px;
@@ -73,16 +73,17 @@ main#main-content {
   box-shadow: 0 6px 18px rgba($pink, 0.35);
   &:hover {
     transform: translateY(2px);
+    box-shadow: 0 6px 55px 1px rgba($pink, 0.35);
   }
 }
 .btn-secondary {
   display: inline-block;
   background: transparent;
-  color: #2c2c2c;
+  color: $blue !important;
   font-weight: 700;
   padding: 14px 22px;
   border-radius: 10px;
-  border: 2px solid #2c2c2c;
+  border: 2px solid $blue;
   cursor: pointer;
   font-size: 16px;
 }

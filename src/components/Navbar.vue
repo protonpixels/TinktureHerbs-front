@@ -10,10 +10,10 @@
       </button>
 
       <div class="nav-list" :class="{ open }">
-        <router-link to="/shop" class="nav-link" @click="open = false">Shop</router-link>
+        <router-link to="/shop" class="nav-link" @click="open = false">Attars</router-link>
         <router-link to="/about" class="nav-link" @click="open = false">About</router-link>
-        <router-link to="/journal" class="nav-link" @click="open = false">Journal</router-link>
-        <router-link to="/contact" class="nav-link" @click="open = false">Contact</router-link>
+        <!-- <router-link to="/journal" class="nav-link" @click="open = false">Journal</router-link> -->
+        <router-link to="/contact" class="nav-link" @click="open = false">Visit</router-link>
         <router-link to="/cart" class="cart-btn" @click="open = false">
           Cart <span class="cart-count" v-if="count">{{ count }}</span>
         </router-link>
@@ -32,13 +32,13 @@ const open = ref(false)
 <style lang="scss" scoped>
 .navbar {
   height: $navheight;
-  box-shadow: 0 0 21px 1px rgba(#000, 0.08);
+  box-shadow: 0 0 21px 1px rgba(#000, 0.06);
   position: fixed;
   top: 0;
   z-index: 100;
   width: 100%;
-  background-color: rgba(#faf8f5, 0.92);
-  backdrop-filter: blur(8px);
+  background-color: rgba($cream, 0.92);
+  backdrop-filter: blur(10px);
 }
 .container {
   display: flex;
@@ -47,8 +47,10 @@ const open = ref(false)
   height: 100%;
 }
 .brand .name {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 800;
+  letter-spacing: -0.01em;
+  color: $ink;
   span {
     color: $pink;
   }
@@ -57,35 +59,35 @@ const open = ref(false)
   display: flex;
   align-items: center;
   gap: 28px;
-  font-size: 16px;
+  font-size: 15px;
   .nav-link {
     font-weight: 600;
+    color: $ink;
     &:hover {
-      color: $pink;
+      color: $brown;
     }
     &.router-link-active {
-      color: $pink;
+      color: $brown;
     }
   }
 }
 .cart-btn {
   font-weight: 700;
-  background-color: $pink;
-  color: #fff;
-  padding: 9px 16px;
-  border-radius: 8px;
+  background-color: $ink;
+  color: $cream;
+  padding: 10px 16px;
+  border-radius: 999px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 0 13px 1px rgba($pink, 0.45);
   transition: transform 0.16s;
   &:hover {
     transform: translateY(2px);
   }
 }
 .cart-count {
-  background: #fff;
-  color: $pink;
+  background: $amber;
+  color: $ink;
   border-radius: 999px;
   font-size: 12px;
   font-weight: 800;
@@ -101,7 +103,7 @@ const open = ref(false)
   span {
     width: 24px;
     height: 2px;
-    background: #2c2c2c;
+    background: $ink;
   }
 }
 @media (max-width: 768px) {
@@ -114,7 +116,7 @@ const open = ref(false)
     top: $navheight;
     left: 0;
     right: 0;
-    background: #faf8f5;
+    background: $cream;
     flex-direction: column;
     align-items: flex-start;
     padding: 20px 24px;
