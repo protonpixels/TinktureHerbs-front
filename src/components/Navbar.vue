@@ -2,7 +2,8 @@
   <nav class="navbar">
     <div class="container">
       <router-link to="/" class="brand">
-        <h1 class="name">Tinkture<span>Herbs</span></h1>
+        <img src="@/assets/tinkture.png" alt="" class="logo" />
+        <!-- <h1 class="name">Tinkture<span>Herbs</span></h1> -->
       </router-link>
 
       <button class="menu-toggle" @click="open = !open" aria-label="Toggle menu">
@@ -13,7 +14,7 @@
         <router-link to="/shop" class="nav-link" @click="open = false">Attars</router-link>
         <router-link to="/about" class="nav-link" @click="open = false">About</router-link>
         <!-- <router-link to="/journal" class="nav-link" @click="open = false">Journal</router-link> -->
-        <router-link to="/contact" class="nav-link" @click="open = false">Visit</router-link>
+        <!-- <router-link to="/contact" class="nav-link" @click="open = false">Visit</router-link> -->
         <router-link to="/cart" class="cart-btn" @click="open = false">
           Cart <span class="cart-count" v-if="count">{{ count }}</span>
         </router-link>
@@ -46,13 +47,22 @@ const open = ref(false)
   justify-content: space-between;
   height: 100%;
 }
-.brand .name {
-  font-size: 26px;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  color: $ink;
-  span {
-    color: $pink;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  .logo {
+    height: calc($navheight * 0.8);
+    border-radius: 15px;
+  }
+  .name {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: $ink;
+    span {
+      color: $pink;
+    }
   }
 }
 .nav-list {

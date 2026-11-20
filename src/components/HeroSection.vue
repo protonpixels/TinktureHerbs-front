@@ -22,15 +22,15 @@
         </p> -->
       </div>
       <div class="hero-image-wrap">
-        <!-- <img
+        <img
           class="hero-image"
-          src="/images/hero-attar.jpg"
+          src="@/assets/hero-image-2.png"
           alt="Amber glass attar bottle with resin and dried botanicals"
-        /> -->
-        <div class="hero-badge">
-          <span class="badge-label">No. 01</span>
+        />
+        <!-- <div class="hero-badge">
+        <span class="badge-label">No. 01</span>
           <span class="badge-name">Frankincense &amp; Myrrh</span>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -104,10 +104,7 @@ h1 {
 }
 .hero-image {
   width: 100%;
-  border-radius: 20px;
   object-fit: cover;
-  aspect-ratio: 4 / 5;
-  box-shadow: 0 30px 60px rgba($brown, 0.22);
 }
 .hero-badge {
   position: absolute;
@@ -134,12 +131,14 @@ h1 {
   }
 }
 @media (max-width: 900px) {
+  .hero {
+    padding-top: calc($navheight * 0.618);
+  }
   .container {
     grid-template-columns: 1fr;
     gap: 48px;
   }
   .hero-image {
-    aspect-ratio: 4 / 3;
   }
   .hero-badge {
     left: 16px;

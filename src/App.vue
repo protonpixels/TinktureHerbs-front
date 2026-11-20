@@ -40,6 +40,15 @@ a:active {
   color: inherit;
   text-decoration: none;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 #app,
 body {
   max-width: 100vw;
@@ -79,11 +88,11 @@ main#main-content {
 .btn-secondary {
   display: inline-block;
   background: transparent;
-  color: $blue !important;
+  color: $green !important;
   font-weight: 700;
   padding: 14px 22px;
   border-radius: 10px;
-  border: 2px solid $blue;
+  border: 2px solid $green;
   cursor: pointer;
   font-size: 16px;
 }
