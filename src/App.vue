@@ -9,7 +9,6 @@
 <script setup>
 import NavBar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
-import ChatBot from './components/ChatBot.vue'
 </script>
 
 <style lang="scss">
@@ -36,7 +35,7 @@ body {
   width: 100%;
   box-sizing: border-box;
   margin: 0;
-  background-color: #111111;
+  background-color: hsl(0, 0%, 8%);
   padding: 0;
 }
 main#main-content {
@@ -54,8 +53,8 @@ main#main-content {
   color: #fff !important;
   font-weight: 700;
   padding: 14px 26px;
-  border-radius: 10px;
-  border: none;
+  border-radius: 34px;
+  border: 2px solid lighten($pink, 13%);
   cursor: pointer;
   font-size: 16px;
   transition:
@@ -69,12 +68,12 @@ main#main-content {
 }
 .btn-secondary {
   display: inline-block;
-  background: transparent;
-  color: $green !important;
+  background: $blue;
+  color: lighten($blue, 84%) !important;
   font-weight: 700;
   padding: 14px 22px;
-  border-radius: 10px;
-  border: 2px solid $green;
+  border-radius: 34px;
+  border: 2px solid lighten($blue, 5%);
   cursor: pointer;
   font-size: 16px;
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <HeroSection />
-
+    <div class="section-divider"></div>
     <!-- Attar collection -->
     <section class="collection">
       <div class="container">
@@ -83,9 +83,17 @@ const attars = products.filter(p => p.category === 'Attar').slice(0, 3)
 </script>
 
 <style lang="scss" scoped>
+.home {
+  background-color: #111;
+}
 .collection {
   padding: 104px 0;
-  background: #111111;
+  background: hsl(0, 0%, 21%);
+  margin: 0;
+}
+.section-divider {
+  background-color: #000;
+  height: 55px;
 }
 .section-head {
   max-width: 640px;
@@ -110,7 +118,7 @@ const attars = products.filter(p => p.category === 'Attar').slice(0, 3)
 }
 .why {
   padding: 104px 0;
-  background: #111;
+  background: hsl(0, 0%, 5%);
 }
 .grid2 {
   display: grid;
