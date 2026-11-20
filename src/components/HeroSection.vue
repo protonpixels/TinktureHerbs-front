@@ -13,7 +13,7 @@
         </p>
         <div class="hero-actions">
           <router-link to="/shop" class="btn-primary">Shop the attars</router-link>
-          <router-link to="/about" class="btn-secondary">Meet the maker</router-link>
+          <router-link to="/about" class="btn-secondary">About Us</router-link>
         </div>
         <!-- <p class="location-note">
           <span class="pin">📍</span>

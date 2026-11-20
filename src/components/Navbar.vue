@@ -12,7 +12,9 @@
 
       <div class="nav-list" :class="{ open }">
         <router-link to="/shop" class="nav-link" @click="open = false">Attars</router-link>
-        <router-link to="/about" class="nav-link" @click="open = false">About</router-link>
+        <router-link to="/about" class="nav-link" @click="open = false"
+          >Herbalist Services</router-link
+        >
         <!-- <router-link to="/journal" class="nav-link" @click="open = false">Journal</router-link> -->
         <!-- <router-link to="/contact" class="nav-link" @click="open = false">Visit</router-link> -->
         <router-link to="/cart" class="cart-btn" @click="open = false">
@@ -71,12 +73,11 @@ const open = ref(false)
   align-items: center;
   gap: 28px;
   font-size: 16px;
-  letter-spacing: 3px;
   .nav-link {
     font-weight: 800;
-    color: lighten($blue, 30%);
+    color: lighten($amber, 30%);
     &:hover {
-      color: darken($blue, 20%);
+      color: darken($blue, 10%);
     }
     &.router-link-active {
       color: $brown;
@@ -92,7 +93,7 @@ const open = ref(false)
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: darken($blue, 20%);
+  background-color: darken($blue, 10%);
   transition: transform 0.16s;
   font-weight: 800;
   &:hover {
