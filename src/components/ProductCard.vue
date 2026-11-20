@@ -23,10 +23,10 @@ defineProps({ product: { type: Object, required: true } })
 <style lang="scss" scoped>
 .product-card {
   display: block;
-  background: #fff;
+  background: #181818;
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid #ece5d8;
+  border: 1px solid $ink;
   transition:
     transform 0.2s,
     box-shadow 0.2s,
@@ -64,20 +64,20 @@ defineProps({ product: { type: Object, required: true } })
   padding: 22px 22px 24px;
   .name {
     font-size: 20px;
-    color: $ink;
+    color: white;
     margin-bottom: 6px;
     font-weight: 700;
   }
   .notes {
     font-size: 13px;
-    color: $brown;
+    color: $amber;
     font-weight: 600;
     letter-spacing: 0.02em;
     margin-bottom: 8px;
   }
   .short {
     font-size: 14px;
-    color: $muted;
+    color: $amber;
     margin-bottom: 18px;
     line-height: 1.5;
   }
@@ -89,7 +89,7 @@ defineProps({ product: { type: Object, required: true } })
   .price {
     font-size: 18px;
     font-weight: 700;
-    color: $ink;
+    color: $green;
   }
   .size {
     font-size: 13px;

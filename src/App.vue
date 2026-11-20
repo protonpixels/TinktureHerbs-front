@@ -15,22 +15,11 @@ import ChatBot from './components/ChatBot.vue'
 <style lang="scss">
 * {
   margin: 0;
-
   padding: 0;
   box-sizing: border-box;
   outline: none;
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Open Sans',
-    'Helvetica Neue',
-    sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #fff;
 }
 
 a,
@@ -41,20 +30,13 @@ a:active {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
 #app,
 body {
   max-width: 100vw;
   width: 100%;
   box-sizing: border-box;
   margin: 0;
+  background-color: #111111;
   padding: 0;
 }
 main#main-content {
@@ -98,12 +80,12 @@ main#main-content {
 }
 .section-title {
   font-size: clamp(28px, 4vw, 40px);
-  color: #2c2c2c;
+  color: #fff;
   margin-bottom: 12px;
 }
 .section-sub {
   font-size: 18px;
-  color: #555;
+  color: $subtitle;
   line-height: 1.6;
   margin-bottom: 32px;
 }

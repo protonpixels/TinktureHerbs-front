@@ -38,7 +38,7 @@ const open = ref(false)
   top: 0;
   z-index: 100;
   width: 100%;
-  background-color: rgba($cream, 0.92);
+  background-color: rgba(#000, 0.7);
   backdrop-filter: blur(10px);
 }
 .container {
@@ -52,8 +52,9 @@ const open = ref(false)
   align-items: center;
   gap: 15px;
   .logo {
-    height: calc($navheight * 0.8);
+    height: calc($navheight * 0.618);
     border-radius: 15px;
+    filter: brightness(100);
   }
   .name {
     font-size: 26px;
@@ -69,12 +70,13 @@ const open = ref(false)
   display: flex;
   align-items: center;
   gap: 28px;
-  font-size: 15px;
+  font-size: 16px;
+  letter-spacing: 3px;
   .nav-link {
-    font-weight: 600;
-    color: $ink;
+    font-weight: 800;
+    color: lighten($blue, 30%);
     &:hover {
-      color: $brown;
+      color: darken($blue, 20%);
     }
     &.router-link-active {
       color: $brown;
@@ -83,20 +85,22 @@ const open = ref(false)
 }
 .cart-btn {
   font-weight: 700;
-  background-color: $ink;
+  background-color: white;
   color: $cream;
-  padding: 10px 16px;
+  padding: 8px 21px;
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  background-color: darken($blue, 20%);
   transition: transform 0.16s;
+  font-weight: 800;
   &:hover {
     transform: translateY(2px);
   }
 }
 .cart-count {
-  background: $amber;
+  background: lighten($blue, 38.2%);
   color: $ink;
   border-radius: 999px;
   font-size: 12px;
@@ -111,14 +115,16 @@ const open = ref(false)
   border: none;
   cursor: pointer;
   span {
-    width: 24px;
-    height: 2px;
-    background: $ink;
+    width: 34px;
+    border-radius: 5px;
+    height: 5px;
+    background: white;
   }
 }
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
+    justify-content: center;
   }
   .nav-list {
     display: none;
@@ -128,10 +134,22 @@ const open = ref(false)
     right: 0;
     background: $cream;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 20px 24px;
-    gap: 16px;
+    gap: 13px;
     box-shadow: 0 8px 21px rgba(#000, 0.08);
+    .nav-link {
+      padding: 8px 0;
+      border-radius: 34px;
+      border: 1px solid $ink;
+      width: 100%;
+      text-align: center;
+      color: $ink;
+    }
+    .cart-btn {
+      width: 100%;
+      justify-content: center;
+    }
     &.open {
       display: flex;
     }

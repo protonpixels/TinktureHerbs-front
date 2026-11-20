@@ -85,7 +85,7 @@ const attars = products.filter(p => p.category === 'Attar').slice(0, 3)
 <style lang="scss" scoped>
 .collection {
   padding: 104px 0;
-  background: #fff;
+  background: #111111;
 }
 .section-head {
   max-width: 640px;
@@ -110,7 +110,7 @@ const attars = products.filter(p => p.category === 'Attar').slice(0, 3)
 }
 .why {
   padding: 104px 0;
-  background: $cream;
+  background: #111;
 }
 .grid2 {
   display: grid;

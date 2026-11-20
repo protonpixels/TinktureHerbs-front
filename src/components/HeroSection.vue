@@ -2,7 +2,7 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <p class="eyebrow">Hudson Valley · Oil-based · Biologist-formulated</p>
+        <p class="eyebrow">Hudson Valley · Oil-based · Herbalist Formulated</p>
         <h1>
           Attar perfume oils,
           <span>rooted in resin and ritual.</span>
@@ -41,11 +41,9 @@
 <style lang="scss" scoped>
 .hero {
   padding: 96px 0 112px;
-  background:
-    radial-gradient(ellipse at top left, rgba($amber, 0.18), transparent 60%),
-    linear-gradient(180deg, $cream 0%, #fff 100%);
   position: relative;
   overflow: hidden;
+  background-color: #111111;
 }
 .container {
   display: grid;
@@ -57,20 +55,22 @@
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: $brown;
+  color: $green;
   font-weight: 700;
   margin-bottom: 22px;
 }
 h1 {
   font-size: clamp(40px, 5.4vw, 64px);
   line-height: 1.05;
-  color: $ink;
-  font-weight: 800;
+  color: $green;
+  font-weight: 300;
   letter-spacing: -0.01em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   span {
     color: $brown;
     font-style: italic;
-    font-weight: 700;
+    font-weight: 400;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 }
 .subhead {
@@ -105,6 +105,7 @@ h1 {
 .hero-image {
   width: 100%;
   object-fit: cover;
+  filter: brightness(1.5);
 }
 .hero-badge {
   position: absolute;

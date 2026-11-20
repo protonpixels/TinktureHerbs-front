@@ -44,7 +44,7 @@
 
 <style lang="scss" scoped>
 .footer {
-  background: $ink;
+  background: #000;
   color: $cream;
   padding: 72px 0 28px;
 }
