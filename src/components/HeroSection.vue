@@ -7,8 +7,9 @@
           <span>rooted in resin and ritual.</span>
         </h1>
         <p class="subhead">
-          Alcohol-free attars blended by a practicing herbalist in the so-called Hudson Valley
-          (occupied Haudenosaunee territory). Authentic & creative herbal delicacies.
+          <strong>Alcohol-free attars</strong> blended by a practicing herbalist in the so-called
+          Hudson Valley (occupied Haudenosaunee territory) serving you authentic & creative herbal
+          delicacies.
         </p>
 
         <div class="hero-actions">
@@ -61,10 +62,10 @@
   z-index: 10;
 }
 .eyebrow {
-  font-size: 12px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: #fff;
+  color: hsl(188, 100%, 84%);
   text-align: center;
   padding: 8px 0;
   border-radius: 34px;
@@ -72,12 +73,13 @@
   margin-top: 34px;
 }
 h1 {
-  font-size: clamp(40px, 5.4vw, 64px);
+  font-size: clamp(34px, 5.4vw, 55px);
   line-height: 1.05;
   color: lighten($green, 8%);
   font-weight: 300;
   letter-spacing: -0.01em;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
   span {
     color: $amber;
     font-style: italic;
@@ -86,11 +88,14 @@ h1 {
   }
 }
 .subhead {
-  font-size: 19px;
+  font-size: 21px;
   line-height: 1.65;
   color: hsl(36, 100%, 84%);
   max-width: 540px;
   margin-top: 24px;
+  strong {
+    color: hsl(36, 13%, 84%);
+  }
 }
 .hero-actions {
   display: grid;

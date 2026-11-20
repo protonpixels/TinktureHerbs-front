@@ -18,7 +18,6 @@ import Footer from './components/Footer.vue'
   box-sizing: border-box;
   outline: none;
   font-family: 'Helvetica Neue', sans-serif;
-  color: #fff;
 }
 
 a,
