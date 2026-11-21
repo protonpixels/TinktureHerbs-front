@@ -46,7 +46,7 @@
   overflow: hidden;
   max-height: calc(100vh - $navheight);
   height: 100vh;
-  background: radial-gradient(rgba($amber-muted, 0.5) -61.8%, hsl(0, 0%, 8.4%) 61.8%);
+  background: radial-gradient(rgba($amber-muted, 0.5) -61.8%, hsl(0, 0%, 4.2%) 61.8%);
   padding: calc($navheight * 0.5) 0;
 }
 

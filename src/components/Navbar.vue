@@ -54,7 +54,7 @@ onUnmounted(() => {
   background: none;
   backdrop-filter: blur(0px);
   background-color: hsl(343, 0%, 8.4%);
-  box-shadow: 0 0px 60px 1px #000;
+  box-shadow: 0 0px 12px 1px rgba($color: #000000, $alpha: 0.33);
   -webkit-backdrop-filter: blur(0px);
   transition:
     background-color 0.35s ease,
