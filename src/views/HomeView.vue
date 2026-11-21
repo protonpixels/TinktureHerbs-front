@@ -84,11 +84,11 @@ const attars = products.filter(p => p.category === 'Attar').slice(0, 3)
 
 <style lang="scss" scoped>
 .home {
-  background-color: #111;
+  background-color: hsl(0, 0%, 8%);
 }
 .collection {
   padding: 104px 0;
-  background: hsl(0, 0%, 21%);
+  background: hsl(0, 0%, 8.33%);
   margin: 0;
 }
 .section-divider {
@@ -118,7 +118,7 @@ const attars = products.filter(p => p.category === 'Attar').slice(0, 3)
 }
 .why {
   padding: 104px 0;
-  background: hsl(0, 0%, 5%);
+  background: hsl(0, 0%, 16.6%);
 }
 .grid2 {
   display: grid;

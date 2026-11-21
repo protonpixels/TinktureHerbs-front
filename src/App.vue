@@ -59,20 +59,21 @@ main#main-content {
   transition:
     transform 0.16s,
     box-shadow 0.16s;
-  box-shadow: 0 6px 18px rgba($pink, 0.35);
+  box-shadow: 0 6px 18px rgba($pink-pop, 0.35);
   &:hover {
     transform: translateY(2px);
-    box-shadow: 0 6px 55px 1px rgba($pink, 0.35);
+    background-color: $pink-pop;
+    box-shadow: 0 6px 55px 1px rgba($pink-pop, 0.35);
   }
 }
 .btn-secondary {
   display: inline-block;
-  background: $blue;
-  color: lighten($blue, 84%) !important;
+  background: $amber;
+  color: lighten($amber, 84%) !important;
   font-weight: 700;
   padding: 14px 22px;
   border-radius: 34px;
-  border: 2px solid lighten($blue, 5%);
+  border: 2px solid lighten($amber, 5%);
   cursor: pointer;
   font-size: 16px;
 }

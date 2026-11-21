@@ -53,7 +53,8 @@ onUnmounted(() => {
   width: 100%;
   background: none;
   backdrop-filter: blur(0px);
-  background-color: darken($blue, 28%);
+  background-color: hsl(343, 0%, 8.4%);
+  box-shadow: 0 0px 60px 1px #000;
   -webkit-backdrop-filter: blur(0px);
   transition:
     background-color 0.35s ease,
@@ -62,10 +63,10 @@ onUnmounted(() => {
 
   &.scrolled {
     // dark, desaturated: a muted charcoal with a hint of warm brown
-    background-color: rgba(darken($blue, 28%), 0.86);
+    background-color: rgba(darken($blue, 24.9%), 0.86);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 6px 21px rgba(#000, 0.18);
+    box-shadow: 0 6px 21px rgba(#000, 0.16);
 
     .logo {
       filter: hue-rotate(8deg) brightness(1.9);
@@ -92,8 +93,12 @@ onUnmounted(() => {
   .logo {
     height: calc($navheight * 0.618);
     border-radius: 15px;
-    filter: hue-rotate(8deg) brightness(2.5);
+    filter: hue-rotate(343deg) brightness(2.33);
     transition: filter 0.35s ease;
+
+    &:hover {
+      filter: hue-rotate(343deg) brightness(1.832);
+    }
   }
 }
 
@@ -104,10 +109,10 @@ onUnmounted(() => {
   font-size: 16px;
   .nav-link {
     font-weight: 800;
-    color: lighten($amber, 34%);
+    color: lighten($amber-muted, 16.7%);
     transition: color 0.2s ease;
     &:hover {
-      color: lighten($amber, 55%);
+      color: lighten($amber, 8.4%);
     }
     &.router-link-active {
       color: $brown;
@@ -118,18 +123,18 @@ onUnmounted(() => {
 .cart-btn {
   font-weight: 800;
   color: #fff;
-
   padding: 8px 21px;
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: darken($amber, 13%);
-  box-shadow: inset 0 0 13px 1px lighten($brown, 5%);
+  background-color: darken($amber, 8.4%);
+  box-shadow: inset 0 0 15px 1px rgba(lighten($amber, 33.4%), 0);
+
   transition: all 0.16s;
   &:hover {
-    transform: translateY(2px);
-    box-shadow: inset 0 0 21px 1px lighten($brown, 8%);
+    background-color: $amber-pop;
+    box-shadow: inset 0 0 13px 1px darken($amber-muted, 16.7%);
   }
 }
 
@@ -153,7 +158,7 @@ onUnmounted(() => {
     width: 34px;
     border-radius: 5px;
     height: 5px;
-    background: $amber;
+    background: lighten($amber-pop, 33.4%);
     transition: background 0.35s ease;
   }
 }

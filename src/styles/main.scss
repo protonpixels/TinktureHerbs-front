@@ -1,10 +1,23 @@
 $navheight: 80px;
 
-$pink: hsl(338, 55%, 34%); // kept as small accent only
-$brown: hsl(36, 64%, 48%); // resin / attar
+///// PINK
+$pink-muted: hsl(344, 34%, 34%); // kept as small accent only
+$pink: hsl(344, 67%, 34%);
+$pink-pop: hsl(344, 83.2%, 34%);
+
+///// AMBER
+$amber-muted: hsl(22, 34%, 34%); // primary accent (attar gold)
+$amber: hsl(22, 67%, 34%); // primary accent (attar gold)
+$amber-pop: hsl(22, 83.2%, 34%); // primary accent (attar gold)
+
+///// BLUE
+$blue-muted: hsl(218, 34%, 34%); // secondary
+$blue: hsl(218, 67%, 34%); // secondary
+$blue-pop: hsl(218, 83.2%, 34%); // secondary
+
+$brown: hsl(36, 34%, 48%); // resin / attar
 $green: hsl(76, 38%, 42%); // botanical
-$blue: hsl(188, 55%, 34%); // secondary
-$amber: hsl(36, 63%, 48%); // primary accent (attar gold)
+
 $cream: #fbf7f0; // page background
 $ink: #1f1a14; // text
 $muted: #6b6357; // muted text

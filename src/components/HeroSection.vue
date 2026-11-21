@@ -2,14 +2,15 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
+        <p class="eyebrow">Oil-based · Healthy · Herbalst-Formulated</p>
         <h1>
-          Attar perfume oils,
-          <span>rooted in resin and ritual.</span>
+          Attar Perfume Oils,
+          <span>Rooted in Resin and Ritual.</span>
         </h1>
         <p class="subhead">
-          <strong>Alcohol-free attars</strong> blended by a practicing herbalist in the so-called
-          Hudson Valley (occupied Haudenosaunee territory) serving you authentic & creative herbal
-          delicacies.
+          <i>Alcohol-free Attars</i> blended by a <u>practicing herbalist</u> in the so-called
+          Hudson Valley (a.k.a. occupied Haudenosaunee territory) providing authentic & creative
+          herbal delicacies.
         </p>
 
         <div class="hero-actions">
@@ -21,7 +22,6 @@
           Visit the studio in Tillson, NY —
           <router-link to="/contact">get directions</router-link>
         </p> -->
-        <p class="eyebrow">Hudson Valley · Oil-based · Herbalist Formulated</p>
       </div>
       <div class="hero-image-wrap">
         <img
@@ -46,42 +46,52 @@
   overflow: hidden;
   max-height: calc(100vh - $navheight);
   height: 100vh;
-  background: radial-gradient(rgba($blue, 0.382) -61.8%, hsl(188, 84%, 2%) 61.8%);
-  padding-top: calc($navheight * 1.382);
+  background: radial-gradient(rgba($amber-muted, 0.5) -61.8%, hsl(0, 0%, 8.4%) 61.8%);
+  padding: calc($navheight * 0.5) 0;
 }
 
 .hero-content {
-  padding: 34px 21px;
+  padding-top: calc($navheight * 1.084);
   border-radius: 13px;
 }
 .container {
   display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: 144px;
+  grid-template-columns: 1fr 0.832fr;
+  gap: 120px;
   align-items: center;
   z-index: 10;
 }
 .eyebrow {
-  font-size: 13px;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: hsl(188, 100%, 84%);
+  color: lighten($pink-pop, 100%);
+  background-color: rgba(lighten($blue-muted, 50%), 0.167);
   text-align: center;
-  padding: 8px 0;
+  padding: 9px 12px;
   border-radius: 34px;
-  font-weight: 700;
-  margin-top: 34px;
+  font-weight: 900;
+  margin-bottom: 30px;
+
+  @media (max-width: 900px) {
+    font-size: 12px;
+  }
 }
 h1 {
-  font-size: clamp(34px, 5.4vw, 55px);
+  font-size: clamp(48px, 4.16vw, 54px);
+  background: linear-gradient(
+    135deg,
+    lighten($amber-pop, 33.3%) 25%,
+    lighten($pink-pop, 16.7%) 125%
+  );
   line-height: 1.05;
-  color: lighten($green, 8%);
+  color: transparent;
+  background-clip: text;
   font-weight: 300;
   letter-spacing: -0.01em;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
   span {
-    color: $amber;
     font-style: italic;
     font-weight: 400;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -90,12 +100,10 @@ h1 {
 .subhead {
   font-size: 21px;
   line-height: 1.65;
-  color: hsl(36, 100%, 84%);
+  background-clip: text;
+  color: lighten($amber, 33.3%);
   max-width: 540px;
-  margin-top: 24px;
-  strong {
-    color: hsl(36, 13%, 84%);
-  }
+  margin-top: 30px;
 }
 .hero-actions {
   display: grid;
@@ -128,7 +136,7 @@ h1 {
 }
 .hero-image-wrap {
   position: relative;
-
+  padding-top: calc($navheight * 1.33);
   @media (max-width: 900px) {
     display: flex;
     .hero-image {
@@ -140,7 +148,7 @@ h1 {
 .hero-image {
   width: 100%;
   object-fit: cover;
-  filter: brightness(2);
+  filter: brightness(1.832);
 }
 .hero-badge {
   position: absolute;
@@ -153,7 +161,7 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  box-shadow: 0 12px 30px rgba(#000, 0.18);
+  box-shadow: 0 12px 30px rgba(#000, 0.167);
   .badge-label {
     font-size: 11px;
     letter-spacing: 0.18em;
@@ -168,15 +176,16 @@ h1 {
 }
 @media (max-width: 900px) {
   .hero {
-    padding-top: calc($navheight * 0.618);
+    padding-top: calc($navheight * 0);
     max-height: fit-content;
     height: fit-content;
   }
   .container {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 0px;
   }
-  .hero-image {
+  .hero-image-wrap {
+    padding-top: 60px;
   }
   .hero-badge {
     left: 16px;
