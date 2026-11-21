@@ -74,7 +74,7 @@
   margin-bottom: 30px;
 
   @media (max-width: 900px) {
-    font-size: 12px;
+    font-size: 9px;
   }
 }
 h1 {
